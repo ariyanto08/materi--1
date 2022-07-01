@@ -17,4 +17,18 @@ $bmw->tipe = "320i";
 $bmw->mesin = "3000ph";
 $bmw->max_speed = "320km/h";
 
-echo "tipe ".$bmw->kecepatanMaksimal();
+$bmw2 = new mobil;
+$bmw2->merk = "BMW";
+$bmw2->tipe = "320i";
+$bmw2->mesin = "3000ph";
+$bmw2->max_speed = "320km/h";
+
+echo "$bmw->mesin";
+echo "<br>";
+echo "$bmw2->mesin";
+
+if($bmw === $bmw2){
+	echo "sama";
+}else{
+	echo "tidak";
+}
