@@ -1,41 +1,82 @@
 <?php 
 
-class mobil {
-	private $merk, $tipe, $mesin, $max_speed;
+class hewan {
+	public $jumlah_kaki, $Bisa_terbang, $bersuara;
 
-	public function cetaktipe(){
-		return $this->tipe;
+	function kemampuan(){
+		return "Bisa_terbang";
 	}
-	public function kecepatanMaksimal(){
-		return "Kecepatan maksimal dari mobil ini adalah ".$this->max_speed;
-	}
-}
-
-function injakgas(){
-	return "balala";
-}
-
-class BMW extends mobil{
-
-}
-
-class Tesla extends mobil{
-	function AutoPilot(){
-		echo "Jalan sendiri";
+	function suara(){
+		return "suara";	
 	}
 }
 
-$bmw = new BMW;
-$bmw->merk = "BMW";
-$bmw->tipe = "320i";
-$bmw->mesin = "3000ph";
-$bmw->max_speed = "320km/h";
+class Kucing extends hewan{
+	function kemampuan(){
+		return "Tidak Bisa Terbang";
+	}
+	function suara(){
+		return "Meoww";
+	}
+}
 
-$tesla = new tesla;
-$tesla->merk = "tesla";
-$tesla->tipe = "ae-xe-2000";
-$tesla->mesin = "listrik";
-$tesla->max_speed = "300km/h";
+class Anjing extends hewan{
+	function kemampuan(){
+		return "Tidak Bisa Terbang";
+	}
+	function suara(){
+		return "Guk guk";
+	}
+}
 
+class Elang extends hewan{
+	function kemampuan(){
+		return "Bisa Terbang";
+	}
+	function suara(){
+		return "Miiip";
+	}
+}
 
-$tesla->AutoPilot();
+class Angsa extends hewan{
+	function kemampuan(){
+		return "Bisa Terbang";
+	}
+	function suara(){
+		return "Kwaakk";
+	}
+}
+
+$momo = new Kucing;
+$momo->jumlah_kaki = 4;
+echo "Momo adalah Kucing <br>";
+echo "Punya kaki sebanyak : ".$momo->jumlah_kaki."<br>";
+echo $momo->Bisa_terbang."<br>";
+echo "Suaranya : ".$momo->bersuara."<br>";
+
+echo "<hr>";
+
+$doggy = new Anjing;
+$doggy->jumlah_kaki = 4;
+echo "doggy adalah Anjing <br>";
+echo "Punya kaki sebanyak : ".$doggy->jumlah_kaki."<br>";
+echo $doggy->Bisa_terbang."<br>";
+echo "Suaranya : ".$doggy->bersuara."<br>";
+
+echo "<hr>";
+
+$zya = new Elang;
+$zya->jumlah_kaki = 2;
+echo "zya adalah Elang <br>";
+echo "Punya kaki sebanyak : ".$zya->jumlah_kaki."<br>";
+echo $zya->Bisa_terbang."<br>";
+echo "Suaranya : ".$zya->bersuara."<br>";
+
+echo "<hr>";
+
+$sasa = new Angsa;
+$sasa->jumlah_kaki = 2;
+echo "sasa adalah Angsa <br>";
+echo "Punya kaki sebanyak : ".$sasa->jumlah_kaki."<br>";
+echo $sasa->Bisa_terbang."<br>";
+echo "Suaranya : ".$sasa->bersuara."<br>";
