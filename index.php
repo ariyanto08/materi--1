@@ -1,14 +1,18 @@
 <?php 
 
 class mobil {
-	public $merk, $tipe, $mesin, $max_speed;
+	private $merk, $tipe, $mesin, $max_speed;
 
-	function cetaktipe(){
+	public function cetaktipe(){
 		return $this->tipe;
 	}
-	function kecepatanMaksimal(){
+	public function kecepatanMaksimal(){
 		return "Kecepatan maksimal dari mobil ini adalah ".$this->max_speed;
 	}
+}
+
+function injakgas(){
+	return "balala";
 }
 
 class BMW extends mobil{
